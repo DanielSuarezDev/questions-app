@@ -1,7 +1,11 @@
+import { Label } from "./components/Label/Label";
+import { QuestionInput } from "./components/QuestionInput/QuestionInput";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hola mundo</h1>
+    <div>
+      <Label>hola mundo</Label>
+      <QuestionInput />
     </div>
   );
 }
