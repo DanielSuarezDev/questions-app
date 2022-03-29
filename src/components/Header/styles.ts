@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   width: 100%;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 2px 2px 90px rgba(0, 0, 0, 0.66);
+  border-bottom: 2px solid #008dd5;
   padding: 10px;
+  margin-bottom: 10px;
 `;
