@@ -1,3 +1,14 @@
 import { FC } from "react";
 
-export const QuestionList: FC = () => <div>QuestionList</div>;
+import { QuestionBox } from "../QuestionBox/QuestionBox";
+
+import { Container } from "./styled";
+
+export const QuestionList: FC<any> = (notes) => {
+  // console.log(notes);
+  return (
+    <Container>
+      <QuestionBox />
+    </Container>
+  );
+};

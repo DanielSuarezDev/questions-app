@@ -4,7 +4,7 @@ export const StyledQuestionInput = styled.input`
   border: 1px solid #c1c1c1;
   border-radius: 14px;
   width: 100%;
-  max-width: 360px;
+  /* max-width: 360px; */
   height: 60px;
   padding: 0 14px;
 

@@ -1,6 +1,5 @@
-import { Label } from "./components/Label/Label";
+import { Home } from "./components/Home/Home";
 import { Layout } from "./components/Layout/Layout";
-import { QuestionInput } from "./components/QuestionInput/QuestionInput";
 import { GlobalStyles } from "./config/stylesGlobals";
 import { AuthProvider } from "./context/AuthProvider";
 
@@ -9,8 +8,7 @@ function App() {
     <AuthProvider>
       <Layout>
         <GlobalStyles />
-        <Label>hola mundo</Label>
-        <QuestionInput />
+        <Home />
       </Layout>
     </AuthProvider>
   );

@@ -3,6 +3,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import { createContext, useState } from "react";
 import { auth } from "../config/firebase";
@@ -33,6 +34,13 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     });
   }, []);
 
+  const cleanData = (): void => {
+    localStorage.clear();
+    setUser(null);
+    setUserConfig({});
+    setUserConfig({ undefined });
+  };
+
   const googleSignIn = (): void => {
     const provider = new GoogleAuthProvider();
     try {
@@ -42,12 +50,18 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
+  const googleLogout = async () => {
+    await signOut(auth);
+    cleanData();
+  };
+
   const value = {
     user,
     setUser,
     userConfig,
     setUserConfig,
     googleSignIn,
+    googleLogout,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
